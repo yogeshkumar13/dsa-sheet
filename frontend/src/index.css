@@ -1,0 +1,185 @@
+/* --- Global Styles --- */
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  color: #333;
+}
+
+/* --- Navbar --- */
+.navbar {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 15px 15px;
+}
+
+.nav-links a {
+  margin-right: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffdd57;
+}
+
+.logout-btn {
+  background: #ffdd57;
+  color: #333;
+  border: none;
+  padding: 6px 14px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.logout-btn:hover {
+  background: #f0c040;
+  transform: scale(1.05);
+}
+
+/* --- Login Page --- */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+.login-box {
+  background: white;
+  padding: 40px 35px;
+  width: 320px;
+  border-radius: 15px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.login-box:hover {
+  transform: translateY(-5px);
+}
+
+.login-box input {
+  width: 100%;
+  margin: 12px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: border 0.3s;
+}
+
+.login-box input:focus {
+  border-color: #667eea;
+  outline: none;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.login-box button:hover {
+  background: #5a67d8;
+  transform: scale(1.05);
+}
+
+/* --- Page Content --- */
+.page {
+  padding: 40px;
+  background: white;
+  min-height: 80vh;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+/* --- Centered Text --- */
+.center {
+  text-align: center;
+  font-weight: 500;
+}
+
+/* --- Accordion --- */
+.accordion {
+  margin-top: 25px;
+}
+
+.accordion-header {
+  background: #764ba2;
+  color: white;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.accordion-header:hover {
+  background: #667eea;
+}
+
+.pending {
+  background: #ff6b6b;
+  padding: 4px 10px;
+  font-size: 12px;
+  margin-left: 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+}
+
+/* --- Tables --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+th,
+td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+th {
+  background: #667eea;
+  color: white;
+  font-weight: 600;
+}
+
+tr:hover {
+  background: #f1f5f9;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px 0;
+  color: #777;
+  font-size: 14px;
+}
+
+
