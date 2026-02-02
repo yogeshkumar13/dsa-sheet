@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+const API = import.meta.env.VITE_API_URL;
 
 export default function Reports({ userId }) {
 
@@ -11,7 +12,7 @@ export default function Reports({ userId }) {
 
     useEffect(() => {
         axios
-            .get("https://dsa-sheet-1-lgf9.onrender.com/api/report/" + userId)
+            .get(`${API}/api/reports${userId}`)
             .then(res => setData(res.data))
             .catch(err => console.error(err));
     }, [userId]);

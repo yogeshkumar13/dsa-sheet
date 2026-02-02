@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
+const API = import.meta.env.VITE_API_URL;
 
 export default function Login() {
     const navigate = useNavigate();
@@ -10,7 +11,7 @@ export default function Login() {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("https://dsa-sheet-1-lgf9.onrender.com/api/auth/login", {
+            const res = await axios.post(`${API}/api/auth/login`, {
                 email,
                 password
             });
