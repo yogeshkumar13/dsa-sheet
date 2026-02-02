@@ -11,7 +11,7 @@ export default function Reports({ userId }) {
 
     useEffect(() => {
         axios
-            .get("http://localhost:5000/api/report/" + userId)
+            .get("https://dsa-sheet-1-lgf9.onrender.com/api/report/" + userId)
             .then(res => setData(res.data))
             .catch(err => console.error(err));
     }, [userId]);
