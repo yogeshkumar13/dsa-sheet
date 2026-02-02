@@ -14,7 +14,7 @@ router.post("/login", async (req, res) => {
         if (!user) {
             // First-time user → create user
             const hashedPassword = await bcrypt.hash(password, 10);
-            // user = await User.create({ email, password: hashedPassword });
+            user = await User.create({ email, password: hashedPassword });
         } else {
             // Compare password
             const isMatch = await bcrypt.compare(password, user.password);
