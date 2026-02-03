@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 const API = import.meta.env.VITE_API_URL;
+
 export default function TopicAccordion({ topic }) {
   const [open, setOpen] = useState(false);
   const [checked, setChecked] = useState({});
@@ -20,17 +21,18 @@ export default function TopicAccordion({ topic }) {
 
         const progressMap = {};
         res.data.forEach((p) => {
-          progressMap[p.problemId] = p.completed;
+          if (p.topic === topic.topic) {
+            progressMap[p.problemId] = p.completed;
+          }
         });
-
         setChecked(progressMap);
       } catch (err) {
         console.log("Progress load failed", err.response?.data || err.message);
       }
     };
 
-    if (token) fetchProgress();
-  }, [token]);
+    fetchProgress();
+  }, [token, topic.topic]);
 
   // 🔹 SAVE progress (POST)
   const handleCheck = async (problemId, value) => {
