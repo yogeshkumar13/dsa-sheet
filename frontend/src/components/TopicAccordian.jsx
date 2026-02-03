@@ -21,8 +21,8 @@ export default function TopicAccordion({ topic }) {
 
         const progressMap = {};
         res.data.forEach((p) => {
-          if (p.topic === topic.topic) {
-            progressMap[p.problemId] = p.completed;
+          if (p.topic === topic.topic && p.completed === true) {
+            progressMap[String(p.problemId)] = true;
           }
         });
         setChecked(progressMap);
@@ -43,7 +43,7 @@ export default function TopicAccordion({ topic }) {
         `${API}/api/progress`,
         {
           topic: topic.topic,
-          problemId,
+          problemId: String(problemId),
           problemName: topic.problems.find((p) => p.id === problemId).name,
           completed: value,
         },
