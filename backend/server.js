@@ -6,7 +6,12 @@ const connectDB = require("./db");
 const app = express();
 connectDB();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://dsa-sheet-1-zbl5.onrender.com", "http://localhost:5173"],
+  }),
+);
+
 app.use(express.json());
 
 // Routes
