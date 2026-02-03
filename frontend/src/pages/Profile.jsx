@@ -1,12 +1,12 @@
-export default function Profile() {
-  const email = localStorage.getItem("email");
+import { useContext } from "react";
+import { UserContext } from "../context/UserContext";
 
-  // name nikaalna email se
-  const name = email ? email.split("@")[0] : "User";
+export default function Profile() {
+  const { email } = useContext(UserContext);
 
   return (
     <div className="page">
-      <h2>Welcome {name}</h2>
+      <h2>Welcome User</h2>
       <p>Email: {email}</p>
       <footer>© 2026 Dashboard. All Rights Reserved.</footer>
     </div>
