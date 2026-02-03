@@ -8,7 +8,7 @@ connectDB();
 
 app.use(
   cors({
-    origin: ["https://dsa-sheet-1-zbl5.onrender.com", "http://localhost:5173"],
+    origin: ["https://dsa-sheet-1-zbl5.onrender.com"],
   }),
 );
 
