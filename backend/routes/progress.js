@@ -4,7 +4,7 @@ const Progress = require("../models/Progress");
 const auth = require("../middleware/auth");
 
 // GET all progress for user
-router.get("/reports", auth, async (req, res) => {
+router.get("/", auth, async (req, res) => {
   try {
     const progress = await Progress.find({ userId: req.user.id });
     res.json(progress);
